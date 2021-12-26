@@ -2,4 +2,4 @@ select
     id as customer_id,
     first_name,
     last_name
-from `dbt-tutorial-334816.bdt_dataset.Jaffle_shop_customers`
+from {{ source('jaffle_shop', 'Jaffle_shop_customers') }}

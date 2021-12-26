@@ -4,5 +4,5 @@ SELECT
     PAYMENTMETHOD as payment_method,
     STATUS,
     AMOUNT / 100 as amount,
-    CREATED as payment_date
-FROM `dbt-tutorial-334816.bdt_dataset.Stripe_payments`
+    CREATED as created_at
+FROM {{ source('stripe', 'Stripe_payments') }}

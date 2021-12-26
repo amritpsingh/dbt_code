@@ -4,4 +4,4 @@ select
     order_date,
     status
 
-from `dbt-tutorial-334816.bdt_dataset.Jaffle_shop_orders`
+from {{ source('jaffle_shop', 'Jaffle_shop_orders') }}
