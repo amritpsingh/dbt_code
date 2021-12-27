@@ -2,10 +2,12 @@ version: 2
 
 sources:
     - name: jaffle_shop
+      description: It contains customers, order and payment data of a retail business.
       database: dbt-tutorial-334816
       schema: bdt_dataset
       tables:
         - name: Jaffle_shop_customers
+          description: Raw customer data.
           columns:
             - name: id
               tests:
@@ -13,8 +15,10 @@ sources:
                 - not_null
 
         - name: Jaffle_shop_orders
+          description: Raw orders data.
           columns:
             - name: id
+              description: Primary key for orders.
               tests:
                 - unique
                 - not_null
