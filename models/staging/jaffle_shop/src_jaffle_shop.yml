@@ -6,5 +6,16 @@ sources:
       schema: bdt_dataset
       tables:
         - name: Jaffle_shop_customers
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+
         - name: Jaffle_shop_orders
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
  
