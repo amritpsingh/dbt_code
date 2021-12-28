@@ -5,3 +5,4 @@ select
     status
 
 from {{ source('jaffle_shop', 'Jaffle_shop_orders') }}
+{{ limit_data_in_dev('order_date', 1000) }}
